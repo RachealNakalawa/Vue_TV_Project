@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=, initial-scale=1.0">
+	<link rel="stylesheet" href="./styles/style.css"/>
+	<title>Rachealz TV </title>
+</head>
+<body>
+	<main id="app">
+
+		<section class="tel-wrapper">
+			<div class="tel-div">
+				<img v-if="power" class="display-img" v-bind:src="imageName[progCounter]" alt="some pic"/>
+			</div>
+	
+			<section class="lower-tv-section">
+				<p>RACHEAL-SUNG</p>
+				<div class="controls">
+					<button v-on:click="switchTelevision" type="button"><i class="pwer-button fa fa-power-off" aria-hidden="true"></i>
+					</button>
+	
+					<button v-on:click="switchUpChannel" type="button">P+</button>
+					<button v-on:click="switchDownChannel" type="button">P-</button>
+					<button type="button">V+</button>
+					<button type="button">V-</button>
+				</div>
+			</section>
+		</section>
+	</main>
+
+	<script
+	src="https://kit.fontawesome.com/ad0c4e912f.js"
+	crossorigin="anonymous"
+></script>
+
+	<script src="./scripts/vue.js"></script>
+	<script src="./scripts/telScript.js"></script>
+</body>
+</html>
